@@ -1,0 +1,25 @@
+<!-- <div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Quanlitiy</th>
+                <th scope="col">Product Price</th>
+                <th scope="col">Total Price</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let prod of product">
+            
+                <app-displaytable [product]="prod"></app-displaytable>
+            
+        </tbody>
+    </table>
+</div> -->
+<div class="row text-primary bg-light text-right">
+    <h4>Total Amount: {{total}}</h4>
+</div>
+<br>
+<hr>
+<div class="row" *ngFor="let prod of product">
+    <app-displaytable [product]="prod" (total)="calulate($event)"></app-displaytable>
+</div>

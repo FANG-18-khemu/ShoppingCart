@@ -1,0 +1,27 @@
+
+<div class="row bg-warning text-center">
+  <h2>Shopping Center</h2>
+</div>
+
+<div class="row mt-4 p-1">
+<br><br>
+<div class="col-2 text-center bg-light" >
+  <a routerLink="item"  >All item</a>
+  <br>
+  
+  <br>
+  <a routerLink="cart"><span *ngIf="val">{{val}}</span><i class="bi bi-cart"></i> Card item</a>
+</div>
+
+<div class="col-1">
+  <div class="d-flex" style="height: 500px;">
+    <div class="vr"></div>
+  </div>
+</div>
+
+<div class="col-9">
+  <router-outlet></router-outlet>
+</div>
+
+</div>
+

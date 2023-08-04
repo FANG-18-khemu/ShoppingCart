@@ -1,0 +1,34 @@
+
+
+
+<div class="col-5">
+
+
+<div class="card mt-2 hover">
+
+    <div class="card-header text-center nav nav-pills card-header-pills">
+          <p class="text-primary">{{prod.title}}</p>
+    </div>
+    <img class="card-img-top bg-light mx-auto"  style="height: 10rem;width: 10rem;"src="{{prod.image}}" alt="card image cap">
+    <div class="card card-body bg-light">
+        <div scope="col">
+            Quanlitiy
+            <div class="form-check-inline">
+                <button  (click)="plus()"><i class="bi bi-plus"></i></button>
+            </div>
+                <div class="form-check-inline">
+                <input type="text" class="form-control" [(ngModel)]="inputnumber">
+                </div>
+                <div class="form-check-inline">
+                <button (click)="minus()"><i class="bi bi-dash-square-dotted"></i></button>
+                </div>
+            </div> 
+            
+      <div class="mt-2 p-2">
+        <h5><span class="text-warning">Price :</span> {{prod.price}}</h5>
+        <h3><span class="text-primary"> Price : </span> {{prod.price * inputnumber}}</h3>
+      </div>      
+    </div>
+    
+</div>
+</div>

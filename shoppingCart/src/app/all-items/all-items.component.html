@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col-4 rounded mt-2" *ngFor="let product of items">
+       <div class="card"  style="width: 20rem;">
+        <img class="card-img-top bg-light"  style="height: 20rem;"src="{{product.image}}" alt="card image cap">
+       <div class="card-body">
+        <h5 class="card-title text-primary">{{product.title}}</h5>
+        <p class="card-text">{{product.description |description}} <span class="text-success">. . .</span></p>
+        
+        <a (click)="update(product)" class="btn btn-success"><i class="bi bi-cart"></i> Add to cart</a>
+        &nbsp;&nbsp;
+        <span class="bg-warning text-right">Price : {{product.price}}</span>
+           
+    </div>  
+    </div>
+      
+</div>
